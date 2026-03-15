@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body {
+    background-color: #e9b693;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.card {
+    background-color: #f4b68e;
+    width: 380px;
+    border-radius: 20px;
+    border: 3px solid #2e2e2e;
+    box-shadow: 12px 12px 0 #2e2e2e;
+    padding-bottom: 25px;
+}
+
+.card-topo {
+    background-color: #d9ddb3;
+    padding: 10px;
+    border-bottom: 3px solid #2e2e2e;
+    border-radius: 18px 18px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-topo h1 {
+    font-size: 20px;
+}
+
+.estrela {
+    font-size: 20px;
+}
+
+.bolinhas span {
+    width: 12px;
+    height: 12px;
+    background-color: #f57f6c;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form input {
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #2e2e2e;
+    outline: none;
+}
+
+.form input:focus {
+    border-color: #f57f6c;
+}
+
+.data-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f57f6c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e76a58;
+}

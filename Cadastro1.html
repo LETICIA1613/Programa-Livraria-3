@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Livraria</title>
+    <link rel="stylesheet" href="cadastro1.css">
+</head>
+
+<body>
+
+<h2 class="titulo">Cadastre-se:</h2>
+
+<div class="card">
+
+    <div class="card-topo">
+        <span class="estrela">✦</span>
+        <h1>Livraria</h1>
+        <div class="bolinhas">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <form class="form">
+
+        <input type="text" name="nome" placeholder="Nome de Usuário" required>
+
+        <input type="email" name="email" placeholder="E-mail" required>
+
+        <input type="password" name="senha" placeholder="Senha" required>
+
+        <input type="password" name="confirmar_senha" placeholder="Confirmar Senha" required>
+
+        <label class="data-label">Data de Nascimento</label>
+        <input type="date" name="data" max="2026-01-01" required>
+
+        <button type="button" onclick="window.location.href='Cadastro2.html'">
+            Próximo
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
