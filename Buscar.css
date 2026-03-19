@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#e8e0d5;
+    }
+    
+    /* TOPO */
+    
+    .topo{
+    background:#f59c9c;
+    padding:15px 30px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    }
+    
+    .topo h2{
+    margin:0;
+    }
+    
+    .voltar{
+    text-decoration:none;
+    font-size:26px;
+    color:black;
+    cursor:pointer;
+    transition:0.2s;
+    }
+    
+    .voltar:hover{
+    transform:scale(1.2);
+    }
+    
+    
+    /* CONTAINER */
+    
+    .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:70vh;
+    }
+    
+    
+    /* CAIXA BUSCA */
+    
+    .caixa-busca{
+    background:#f3e5d7;
+    padding:40px;
+    border-radius:12px;
+    border:1px solid #ccc;
+    text-align:center;
+    width:400px;
+    }
+    
+    
+    /* BUSCA */
+    
+    .busca{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    }
+    
+    .busca input{
+    flex:1;
+    padding:10px;
+    border-radius:20px;
+    border:1px solid #999;
+    font-size:14px;
+    }
+    
+    .busca button{
+    padding:10px 18px;
+    border:none;
+    border-radius:20px;
+    background:#f4b183;
+    cursor:pointer;
+    font-weight:bold;
+    }
+    
+    .busca button:hover{
+    background:#e89a6a;
+    }
+    
