@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #F0F0F2 0%, #E8E8EA 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #8C031C 0%, #BF6980 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(140, 3, 28, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #F0F0F2;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-sem-borda {
+    background: rgba(240, 240, 242, 0.2);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(240, 240, 242, 0.3);
+}
+
+.btn-sem-borda:hover {
+    background: rgba(217, 182, 7, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(217, 182, 7, 0.4);
+}
+
+/* Container da Tabela */
+.tabela-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    background: #F0F0F2;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(140, 3, 28, 0.15);
+    border-collapse: collapse;
+}
+
+/* Cabeçalho da Tabela */
+thead {
+    background: linear-gradient(135deg, #8C031C 0%, #BF6980 100%);
+}
+
+thead th {
+    padding: 1.5rem 1rem;
+    color: #F0F0F2;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+thead th:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background: rgba(240, 240, 242, 0.3);
+}
+
+/* Corpo da Tabela */
+tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(140, 3, 28, 0.1);
+}
+
+tbody tr:hover {
+    background: linear-gradient(90deg, rgba(217, 182, 7, 0.1) 0%, rgba(140, 92, 3, 0.1) 100%);
+    transform: scale(1.01);
+}
+
+tbody td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Status */
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status.pendente {
+    background: linear-gradient(135deg, #D9B607, #8C5C03);
+    color: #F0F0F2;
+    box-shadow: 0 4px 15px rgba(217, 182, 7, 0.4);
+}
+
+.status.preparando {
+    background: linear-gradient(135deg, #BF6980, #8C031C);
+    color: #F0F0F2;
+}
+
+.status.finalizado {
+    background: linear-gradient(135deg, #8C5C03, #D9B607);
+    color: #F0F0F2;
+}
+
+/* Preço */
+.preco {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #8C031C;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Botões de Ação */
+.btn-acao {
+    background: linear-gradient(135deg, #D9B607 0%, #8C5C03 100%);
+    color: #F0F0F2;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(217, 182, 7, 0.3);
+}
+
+.btn-acao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(217, 182, 7, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .tabela-container {
+        padding: 1rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    thead {
+        display: none;
+    }
+    
+    tbody tr {
+        margin-bottom: 1rem;
+        display: block;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(140, 3, 28, 0.1);
+    }
+    
+    tbody td {
+        display: block;
+        text-align: right;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(140, 3, 28, 0.1);
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    tbody td::before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        font-weight: 600;
+        color: #8C031C;
+    }
+    
+    tbody td:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-sem-borda {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}

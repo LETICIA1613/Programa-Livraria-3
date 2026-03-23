@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Livraria</title>
+    <link rel="stylesheet" href="CadastroVendedor.css">
+</head>
+
+<body>
+
+<h2 class="titulo">Cadastro de Vendedor</h2>
+
+<div class="card">
+
+    <div class="card-topo">
+        <h1>Livraria</h1>
+    </div>
+
+    <form class="form">
+
+        <!-- Lado Esquerdo -->
+        <div class="lado">
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="text" placeholder="Nome da empresa" required>
+            <input type="text" placeholder="CNPJ" required>
+            <input type="text" placeholder="CPF" required>
+
+            <label>Foto do RG</label>
+            <input type="file" required>
+            <input type="file" required>
+
+            <input type="text" placeholder="Telefone" required>
+
+            <fieldset>
+                <legend>Porte da Empresa</legend>
+                <label><input type="radio" name="porte"> MEI</label>
+                <label><input type="radio" name="porte"> Pequeno</label>
+                <label><input type="radio" name="porte"> Médio</label>
+                <label><input type="radio" name="porte"> Grande</label>
+            </fieldset>
+
+            <input type="text" placeholder="Endereço" required>
+        </div>
+
+        <!-- Lado Direito -->
+        <div class="lado">
+            <fieldset>
+                <legend>Especialização</legend>
+                <label><input type="checkbox"> Educacionais</label><br>
+                <label><input type="checkbox"> Infantis</label><br>
+                <label><input type="checkbox"> Religiosos</label><br>
+                <label><input type="checkbox"> Acadêmicos</label><br>
+                <label><input type="checkbox"> Ficção</label><br>
+                <label><input type="checkbox"> Técnicos</label><br>
+                <label><input type="checkbox"> Juvenil</label><br>
+                <label><input type="checkbox"> Autoajuda</label><br>
+                Outros: <input type="text">
+            </fieldset>
+
+            <input type="password" placeholder="Crie uma Senha" required>
+            <input type="password" placeholder="Confirmar Senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

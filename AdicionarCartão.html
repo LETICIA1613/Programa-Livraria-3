@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria - Cartão</title>
+    <link rel="stylesheet" href="AdicionarCartão.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Adicionar Cartão</h2>
+        <hr>
+        <h3>Termo de Segurança</h3>
+        <hr>
+
+        <h3>Informações do cartão</h3>
+
+        <label for="numeroCartao">Nº do Cartão</label>
+        <input type="text" id="numeroCartao" placeholder="0000 0000 0000 0000">
+
+        <div class="linha">
+            <div>
+                <label for="dataValidade">Validade</label>
+                <input type="month" id="dataValidade">
+            </div>
+
+            <div>
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" placeholder="123">
+            </div>
+        </div>
+
+        <label for="nomeCartao">Nome no Cartão</label>
+        <input type="text" id="nomeCartao" placeholder="Nome completo">
+
+        <button>Salvar Cartão</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+:root {
+    --vermelho-escuro: #8C031C;
+    --rosa-medio: #BF6980;
+    --cinza-claro: #F0F0F2;
+    --dourado:#D9B607;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--rosa-medio));
+    min-height: 100vh;
+    color: var(--branco);
+}
+
+.titulo {
+    text-align: center;
+    color: var(--branco);
+    margin: 40px 0 30px 0;
+    font-size: 32px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    font-weight: bold;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    display: flex;
+    gap: 60px;
+    padding: 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* IMAGENS */
+.imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 0 0 300px;
+}
+
+.img-box {
+    position: relative;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+.img-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--rosa-medio);
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--branco);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--vermelho-escuro);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-img:hover {
+    background: var(--rosa-medio);
+    color: var(--branco);
+    transform: scale(1.1);
+}
+
+/* FORMULÁRIO */
+.formulario {
+    background: rgba(255,255,255,0.95);
+    padding: 50px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(139,3,28,0.25);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* LINHAS */
+.linha {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.linha > div {
+    flex: 1;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--vermelho-escuro);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 18px 20px;
+    margin-top: 5px;
+    border-radius: 18px;
+    border: 3px solid var(--cinza-claro);
+    font-size: 16px;
+    background: var(--branco);
+    transition: 0.3s;
+    font-family: inherit;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--rosa-medio);
+    box-shadow: 0 0 25px rgba(191,105,128,0.3), inset 0 2px 8px rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+    font-family: inherit;
+}
+
+/* BOTÃO */
+.btn {
+    width: 100%;
+    margin-top: 40px;
+    padding: 22px;
+    background: linear-gradient(45deg, var(--dourado), #8C5C03);
+    color: var(--branco);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    box-shadow: 0 12px 35px rgba(58,64,17,0.4);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, var(--rosa-medio), var(--vermelho-escuro));
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(139,3,28,0.5);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 40px;
+    }
+    
+    .imagens {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .formulario {
+        padding: 30px 25px;
+    }
+    
+    .linha {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

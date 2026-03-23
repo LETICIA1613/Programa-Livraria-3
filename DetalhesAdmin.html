@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalhes da Loja</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:#F0F0F2;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* MAIN */
+.main{
+    width:100%;
+    max-width:1400px;
+    padding:40px;
+}
+.header{font-size:28px;font-weight:600;color:#8C031C;margin-bottom:30px;}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 12px 40px rgba(0,0,0,0.15);
+    background:white;
+}
+
+thead tr{
+    background:linear-gradient(135deg, #BF6980 0%, #8C031C 100%);
+    color:white;
+}
+
+th{
+    padding:25px 20px;
+    font-weight:700;
+    font-size:18px;
+    text-align:center;
+}
+
+tbody tr{
+    transition:all 0.3s ease;
+    border-bottom:2px solid #f0f0f0;
+}
+
+tbody tr:hover{
+    background:#F8F9FA;
+    transform:scale(1.02);
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+td{
+    padding:25px 20px;
+    text-align:center;
+    font-size:16px;
+    vertical-align:top;
+}
+
+.item-mensal, .item-anual, .item-vendas{
+    background:#F8F9FA;
+    padding:18px 15px;
+    border-radius:12px;
+    border-left:5px solid #D9B607;
+    margin:10px 0;
+    font-weight:600;
+    font-size:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    transition:all 0.3s ease;
+}
+
+.item-mensal:hover, .item-anual:hover, .item-vendas:hover{
+    transform:translateX(8px);
+    background:#E9ECEF;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width:1200px){
+    .main{max-width:100%;padding:20px;}
+    th, td{padding:20px 15px;}
+    th{font-size:16px;}
+    td{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<!-- CONTEÚDO -->
+<div class="main">
+<div class="header">Detalhes da Loja</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>⭐ Avaliações</th>
+            <th>📊 Relatório Mensal</th>
+            <th>📈 Relatório Anual</th>
+            <th>📋 Histórico de Vendas</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <div class="item-mensal">⭐⭐⭐⭐⭐ "Muito bom!"</div>
+                <div class="item-mensal">⭐⭐⭐⭐ "Bom serviço"</div>
+                <div class="item-mensal">⭐⭐⭐⭐⭐ "Recomendo!"</div>
+                <div class="item-mensal">⭐⭐⭐⭐⭐ "Excelente!"</div>
+            </td>
+            <td>
+                <div class="item-mensal">Vendas: 120</div>
+                <div class="item-mensal">Vendas: 150</div>
+                <div class="item-mensal">Vendas: 130</div>
+                <div class="item-mensal">Vendas: 100</div>
+            </td>
+            <td>
+                <div class="item-anual">Vendas: 50.200</div>
+                <div class="item-anual">Vendas: 60.000</div>
+                <div class="item-anual">Vendas: 80.000</div>
+                <div class="item-anual">Vendas: 40.000</div>
+            </td>
+            <td>
+                <div class="item-vendas">Jan: 120 vendas</div>
+                <div class="item-vendas">Fev: 150 vendas</div>
+                <div class="item-vendas">Mar: 130 vendas</div>
+                <div class="item-vendas">Abr: 100 vendas</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+</body>
+</html>

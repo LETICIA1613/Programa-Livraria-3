@@ -1,0 +1,123 @@
+/* ===== PALETA DE CORES CONSISTENTE ===== */
+:root {
+    --vermelho-escuro: #8C031C;
+    --rosa-medio: #BF6980;
+    --cinza-claro: #F0F0F2;
+    --dourado-principal: #D9B607;
+    --dourado-escuro: #8C5C03;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--rosa-medio));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.formulario {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(140, 3, 28, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: var(--vermelho-escuro);
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 2px solid var(--rosa-medio);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 25px;
+    background: var(--cinza-claro);
+}
+
+legend {
+    color: var(--dourado-principal);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.opcao input {
+    margin: 0;
+    width: auto;
+    accent-color: var(--dourado-principal);
+    transform: scale(1.2);
+}
+
+.opcao:hover {
+    background: rgba(217, 182, 7, 0.1);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(217, 182, 7, 0.2);
+}
+
+.opcao input:checked + span {
+    color: var(--dourado-principal);
+    font-weight: 600;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--dourado-principal), var(--dourado-escuro));
+    color: var(--branco);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(217, 182, 7, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado-principal));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(217, 182, 7, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .formulario {
+        padding: 25px 20px;
+        margin: 20px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
